@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>761D5B96-36F7-4C9C-9BEA-E4A3E1552A88</string>
+	<key>IDESourceControlProjectName</key>
+	<string>SmarteRun</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>2C627955-C2C2-4944-AD19-5DC812FC6085</key>
+		<string>https://github.com/buffalohird/144-Final-Project.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>SmarteRun/SmarteRun.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>2C627955-C2C2-4944-AD19-5DC812FC6085</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/buffalohird/144-Final-Project.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>2C627955-C2C2-4944-AD19-5DC812FC6085</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>2C627955-C2C2-4944-AD19-5DC812FC6085</string>
+			<key>IDESourceControlWCCName</key>
+			<string>144-Final-Project</string>
+		</dict>
+	</array>
+</dict>
+</plist>
