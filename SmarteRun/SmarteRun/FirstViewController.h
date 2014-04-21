@@ -26,10 +26,16 @@ double currentMaxRotZ;
 @property (strong, nonatomic) IBOutlet UILabel *maxRotY;
 @property (strong, nonatomic) IBOutlet UILabel *maxRotZ;
 
+@property (nonatomic) double accelerationX;
+@property (nonatomic) double accelerationY;
+@property (nonatomic) double accelerationZ;
+
+
 
 
 
 - (IBAction)resetMaxValues:(id)sender;
+- (void)logValues:(id)sender;
 
 @property (strong, nonatomic) CMMotionManager *motionManager;
 

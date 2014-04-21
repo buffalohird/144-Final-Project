@@ -38,7 +38,21 @@
                                                      NSLog(@"%@", error);
                                                  }
                                              }];
+    
+    [NSTimer scheduledTimerWithTimeInterval:2.0
+                                     target:self
+                                   selector:@selector(logValues:)
+                                   userInfo:nil
+                                    repeats:YES];
 }
+
+
+-(void)logValues:(id)sender
+{
+    NSLog([NSString stringWithFormat:@"%f %f %f", self.accelerationX, self.accelerationY, self.accelerationZ]);
+}
+
+
 
 -(void)outputAccelertionData:(CMAcceleration)acceleration
 {
@@ -60,6 +74,10 @@
     {
         currentMaxAccelZ = acceleration.z;
     }
+    
+    self.accelerationX = acceleration.x;
+    self.accelerationX = acceleration.y;
+    self.accelerationX = acceleration.z;
     
     self.maxAccX.text = [NSString stringWithFormat:@" %.2f",currentMaxAccelX];
     self.maxAccY.text = [NSString stringWithFormat:@" %.2f",currentMaxAccelY];
