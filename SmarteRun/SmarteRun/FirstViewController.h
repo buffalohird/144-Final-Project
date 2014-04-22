@@ -2,6 +2,7 @@
 #import <CoreMotion/CoreMotion.h>
 
 
+
 double currentMaxAccelX;
 double currentMaxAccelY;
 double currentMaxAccelZ;
@@ -30,12 +31,19 @@ double currentMaxRotZ;
 @property (nonatomic) double accelerationY;
 @property (nonatomic) double accelerationZ;
 
+@property (nonatomic, strong) NSMutableArray *xArray;
+@property (nonatomic, strong) NSMutableArray *yArray;
+@property (nonatomic, strong) NSMutableArray *zArray;
+
+
+
 
 
 
 
 - (IBAction)resetMaxValues:(id)sender;
 - (void)logValues:(id)sender;
+- (void)flushAccelerometerData;
 
 @property (strong, nonatomic) CMMotionManager *motionManager;
 

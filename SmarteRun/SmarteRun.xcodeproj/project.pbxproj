@@ -22,6 +22,8 @@
 		9E312A9618FD8BA500661985 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E312A7518FD8BA400661985 /* UIKit.framework */; };
 		9E312A9E18FD8BA500661985 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9E312A9C18FD8BA500661985 /* InfoPlist.strings */; };
 		9E312AA018FD8BA500661985 /* SmarteRunTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E312A9F18FD8BA500661985 /* SmarteRunTests.m */; };
+		9EABAD8C1904CF4C009872DE /* ThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EABAD8B1904CF4C009872DE /* ThirdViewController.m */; };
+		9EABAD8F1904D624009872DE /* RunViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EABAD8E1904D624009872DE /* RunViewController.m */; };
 		9EB8C83F1901BC0B00E78144 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EB8C83E1901BC0B00E78144 /* CoreMotion.framework */; };
 /* End PBXBuildFile section */
 
@@ -57,6 +59,10 @@
 		9E312A9B18FD8BA500661985 /* SmarteRunTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SmarteRunTests-Info.plist"; sourceTree = "<group>"; };
 		9E312A9D18FD8BA500661985 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		9E312A9F18FD8BA500661985 /* SmarteRunTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SmarteRunTests.m; sourceTree = "<group>"; };
+		9EABAD8A1904CF4C009872DE /* ThirdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThirdViewController.h; sourceTree = "<group>"; };
+		9EABAD8B1904CF4C009872DE /* ThirdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThirdViewController.m; sourceTree = "<group>"; };
+		9EABAD8D1904D624009872DE /* RunViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RunViewController.h; sourceTree = "<group>"; };
+		9EABAD8E1904D624009872DE /* RunViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RunViewController.m; sourceTree = "<group>"; };
 		9EB8C83E1901BC0B00E78144 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -126,6 +132,10 @@
 				9E312A8718FD8BA400661985 /* FirstViewController.m */,
 				9E312A8918FD8BA400661985 /* SecondViewController.h */,
 				9E312A8A18FD8BA400661985 /* SecondViewController.m */,
+				9EABAD8A1904CF4C009872DE /* ThirdViewController.h */,
+				9EABAD8B1904CF4C009872DE /* ThirdViewController.m */,
+				9EABAD8D1904D624009872DE /* RunViewController.h */,
+				9EABAD8E1904D624009872DE /* RunViewController.m */,
 				9E312A8C18FD8BA400661985 /* Images.xcassets */,
 				9E312A7818FD8BA400661985 /* Supporting Files */,
 			);
@@ -259,6 +269,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				9E312A8B18FD8BA400661985 /* SecondViewController.m in Sources */,
+				9EABAD8C1904CF4C009872DE /* ThirdViewController.m in Sources */,
+				9EABAD8F1904D624009872DE /* RunViewController.m in Sources */,
 				9E312A8218FD8BA400661985 /* AppDelegate.m in Sources */,
 				9E312A8818FD8BA400661985 /* FirstViewController.m in Sources */,
 				9E312A7E18FD8BA400661985 /* main.m in Sources */,

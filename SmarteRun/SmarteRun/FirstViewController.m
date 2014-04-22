@@ -29,6 +29,15 @@
     currentMaxRotY = 0;
     currentMaxRotZ = 0;
     
+    self.xArray = [[NSMutableArray alloc] init];
+    self.yArray = [[NSMutableArray alloc] init];
+    self.zArray = [[NSMutableArray alloc] init];
+    
+    
+
+    
+    
+    
 
     [self.motionManager startAccelerometerUpdatesToQueue:[NSOperationQueue currentQueue]
                                              withHandler:^(CMAccelerometerData  *accelerometerData, NSError *error) {
@@ -44,16 +53,85 @@
                                    selector:@selector(logValues:)
                                    userInfo:nil
                                     repeats:YES];
+    
+    [NSTimer scheduledTimerWithTimeInterval:5.0
+                                     target:self
+                                   selector:@selector(flushAccelerometerData)
+                                   userInfo:nil
+                                    repeats:YES];
 }
 
 
 -(void)logValues:(id)sender
 {
-    NSLog([NSString stringWithFormat:@"%f %f %f", self.accelerationX, self.accelerationY, self.accelerationZ]);
+
+    
+    NSString *errorDesc = nil;
+    NSPropertyListFormat format;
+    NSString *plistPath;
+    NSString *rootPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,
+                                                              NSUserDomainMask, YES) objectAtIndex:0];
+    plistPath = [rootPath stringByAppendingPathComponent:@"Data.plist"];
+    if (![[NSFileManager defaultManager] fileExistsAtPath:plistPath]) {
+        plistPath = [[NSBundle mainBundle] pathForResource:@"Data" ofType:@"plist"];
+    }
+    NSData *plistXML = [[NSFileManager defaultManager] contentsAtPath:plistPath];
+    NSDictionary *temp = (NSDictionary *)[NSPropertyListSerialization
+                                          propertyListFromData:plistXML
+                                          mutabilityOption:NSPropertyListMutableContainersAndLeaves
+                                          format:&format
+                                          errorDescription:&errorDesc];
+    if (!temp) {
+        NSLog(@"Error reading plist: %@, format: %d", errorDesc, format);
+    }
+    NSMutableArray *newArray = [temp objectForKey:@"x"];
+    //NSLog([NSString stringWithFormat:@"%@", newArray]);
+    
+    
+    //load from savedStock example int value
+    
+
+    [self.xArray addObject:[NSString stringWithFormat:@"%f", self.accelerationX]];
+    [self.yArray addObject:[NSString stringWithFormat:@"%f", self.accelerationY]];
+    [self.yArray addObject:[NSString stringWithFormat:@"%f", self.accelerationZ]];
+    
+    
+    NSLog(@"hi");
+    
 }
 
 
 
+-(void)flushAccelerometerData
+{
+    NSString *error;
+    NSString *rootPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+    NSString *plistPath = [rootPath stringByAppendingPathComponent:@"Data.plist"];
+    NSDictionary *plistDict = [NSDictionary dictionaryWithObjects:
+                               [NSArray arrayWithObjects: self.xArray, nil]
+                                                          forKeys:[NSArray arrayWithObjects: @"x", nil]];
+    NSData *plistData = [NSPropertyListSerialization dataFromPropertyList:plistDict
+                                                                   format:NSPropertyListXMLFormat_v1_0
+                                                         errorDescription:&error];
+    if(plistData) {
+        [plistData writeToFile:plistPath atomically:YES];
+    }
+    else {
+        NSLog(error);
+    }
+    
+    
+    
+    
+    
+    
+    
+
+    
+
+    
+    
+}
 -(void)outputAccelertionData:(CMAcceleration)acceleration
 {
     
