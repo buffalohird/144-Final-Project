@@ -21,6 +21,8 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     
+    self.isCurrentlyTakingData = NO;
+    
     currentMaxAccelX = 0;
     currentMaxAccelY = 0;
     currentMaxAccelZ = 0;
@@ -33,39 +35,44 @@
     self.yArray = [[NSMutableArray alloc] init];
     self.zArray = [[NSMutableArray alloc] init];
     
-    
+}
 
+-(IBAction)logButtonPressed:(id)sender
+{
+    if (!self.isCurrentlyTakingData)
+    {
+        self.isCurrentlyTakingData = YES;
+        [self.motionManager startAccelerometerUpdatesToQueue:[NSOperationQueue currentQueue]
+                                                 withHandler:^(CMAccelerometerData  *accelerometerData, NSError *error) {
+                                                     [self outputAccelerationData:accelerometerData.acceleration];
+                                                     if(error){
+                                                         
+                                                         NSLog(@"%@", error);
+                                                     }
+                                                 }];
+        
+        self.dataLoggingInterval = [NSTimer scheduledTimerWithTimeInterval:0.2
+                                         target:self
+                                       selector:@selector(logValues:)
+                                       userInfo:nil
+                                        repeats:YES];
+        
+    }
+    else
+    {
+        self.isCurrentlyTakingData = NO;
+        [self flushAccelerometerData];
+        [self.dataLoggingInterval invalidate];
+        
+    }
     
-    
-    
-
-    [self.motionManager startAccelerometerUpdatesToQueue:[NSOperationQueue currentQueue]
-                                             withHandler:^(CMAccelerometerData  *accelerometerData, NSError *error) {
-                                                 [self outputAccelertionData:accelerometerData.acceleration];
-                                                 if(error){
-                                                     
-                                                     NSLog(@"%@", error);
-                                                 }
-                                             }];
-    
-    [NSTimer scheduledTimerWithTimeInterval:2.0
-                                     target:self
-                                   selector:@selector(logValues:)
-                                   userInfo:nil
-                                    repeats:YES];
-    
-    [NSTimer scheduledTimerWithTimeInterval:5.0
-                                     target:self
-                                   selector:@selector(flushAccelerometerData)
-                                   userInfo:nil
-                                    repeats:YES];
 }
 
 
 -(void)logValues:(id)sender
 {
 
-    
+    /*
     NSString *errorDesc = nil;
     NSPropertyListFormat format;
     NSString *plistPath;
@@ -89,14 +96,14 @@
     
     
     //load from savedStock example int value
-    
+    */
 
     [self.xArray addObject:[NSString stringWithFormat:@"%f", self.accelerationX]];
     [self.yArray addObject:[NSString stringWithFormat:@"%f", self.accelerationY]];
     [self.yArray addObject:[NSString stringWithFormat:@"%f", self.accelerationZ]];
     
     
-    NSLog(@"hi");
+    //NSLog([NSString stringWithFormat:@"%@", newArray]);
     
 }
 
@@ -108,8 +115,8 @@
     NSString *rootPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
     NSString *plistPath = [rootPath stringByAppendingPathComponent:@"Data.plist"];
     NSDictionary *plistDict = [NSDictionary dictionaryWithObjects:
-                               [NSArray arrayWithObjects: self.xArray, nil]
-                                                          forKeys:[NSArray arrayWithObjects: @"x", nil]];
+                               [NSArray arrayWithObjects: self.xArray, self.yArray, self.zArray, nil]
+                                                          forKeys:[NSArray arrayWithObjects: @"x", @"y", @"z", nil]];
     NSData *plistData = [NSPropertyListSerialization dataFromPropertyList:plistDict
                                                                    format:NSPropertyListXMLFormat_v1_0
                                                          errorDescription:&error];
@@ -132,7 +139,7 @@
     
     
 }
--(void)outputAccelertionData:(CMAcceleration)acceleration
+-(void)outputAccelerationData:(CMAcceleration)acceleration
 {
     
     
@@ -156,6 +163,8 @@
     self.accelerationX = acceleration.x;
     self.accelerationX = acceleration.y;
     self.accelerationX = acceleration.z;
+    
+    NSLog([NSString stringWithFormat:@"x: %f \ny: %f \nz: %f", acceleration.x, acceleration.y, acceleration.z]);
     
     self.maxAccX.text = [NSString stringWithFormat:@" %.2f",currentMaxAccelX];
     self.maxAccY.text = [NSString stringWithFormat:@" %.2f",currentMaxAccelY];

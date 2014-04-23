@@ -27,6 +27,9 @@ double currentMaxRotZ;
 @property (strong, nonatomic) IBOutlet UILabel *maxRotY;
 @property (strong, nonatomic) IBOutlet UILabel *maxRotZ;
 
+@property (nonatomic) BOOL *isCurrentlyTakingData;
+@property (strong, nonatomic) NSTimer *dataLoggingInterval;
+
 @property (nonatomic) double accelerationX;
 @property (nonatomic) double accelerationY;
 @property (nonatomic) double accelerationZ;
@@ -42,6 +45,7 @@ double currentMaxRotZ;
 
 
 - (IBAction)resetMaxValues:(id)sender;
+- (IBAction)logButtonPressed:(id)sender;
 - (void)logValues:(id)sender;
 - (void)flushAccelerometerData;
 
