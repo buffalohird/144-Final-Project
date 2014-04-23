@@ -19,6 +19,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    NSLog(@"perry wants it in the cookie jar");
 	// Do any additional setup after loading the view, typically from a nib.
     
     self.isCurrentlyTakingData = NO;
@@ -141,7 +142,7 @@
 }
 -(void)outputAccelerationData:(CMAcceleration)acceleration
 {
-    
+    NSLog(@"I'm getting called at all");
     
     
     self.accX.text = [NSString stringWithFormat:@" %.2fg",acceleration.x];
