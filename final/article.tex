@@ -132,7 +132,21 @@ This is a problem many are interested in solving. With the insurgence of mobile 
 	
 	Our prediction algorithm implements a merging of our closest neighbors, iterating through each time interval for which an average of the elapsed distances is produced using geometric averaging of coordinates.  We achieve reasonable accuracy in this process by using an exponential decay weighting, by which runs further in distance from our desired prediction are given exponentially lower weighting.  By this we have our weighted output value:. We defined our gamma value such that we give a neighboring run <1\% weighting after a 5km distance from our desired output.  We believe this difference is the value at which we are considering distinctly separate types of runs.  We note that generally for every given kilometer away from our desired output, the weighting of a neighbor is essentially cut in a third.\\
 	
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=6cm]{overlap_run.png}
+\caption{A graph of pace from an actual run (shown in red) and a graph of the predicted pace (shown in blue). }
+\end{center}
+\end{figure}
+	
 	Using this predicted graph R(x,y,z) we provide tangent-line and secant-line predictions such that we provide a recommended pace for a runner such that given their current performance they achieve, exceed, or relax compared to their usual performance.  This step essentially merges our predictive data with the runner'€™s current activity and would be the useful user-facing data provided in a retail application of our algorithms.\\
+	
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=6cm]{overlap_run.png}
+\caption{A graph of pace from an actual run (shown in red) and a graph of the predicted pace (shown in blue).  }
+\end{center}
+\end{figure}	
 
 \subsection{Design Decisions}
 	We consider again some choice design decisions made in the creation of our algorithms.  We note that for the scope of this assignment there were both many logical and arbitrary invariants we had to consider which influenced our design decisions.\\
