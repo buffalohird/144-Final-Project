@@ -1,9 +1,12 @@
+<<<<<<< HEAD
 This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  12 MAY 2014 17:49
+=======
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  12 MAY 2014 17:48
+>>>>>>> 38a19f012f3503dd3c74e31d48ec3754255779c4
 entering extended mode
  restricted \write18 enabled.
- file:line:error style messages enabled.
  %&-line parsing enabled.
-**article.tex
+**article.tex -recorder
 (./article.tex
 LaTeX2e <2011/06/27>
 Babel <3.9f> and hyphenation patterns for 78 languages loaded.
@@ -670,16 +673,47 @@ Underfull \hbox (badness 10000) in paragraph at lines 174--175
 
  []
 
+<<<<<<< HEAD
 <all.png, id=33, 578.16pt x 433.62pt>
 File: all.png Graphic file (type png)
  <use all.png>
 Package pdftex.def Info: all.png used on input line 180.
 (pdftex.def)             Requested size: 170.71652pt x 128.03589pt.
+=======
+
+LaTeX Warning: File `all.png' not found on input line 173.
+
+
+! Package pdftex.def Error: File `all.png' not found.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.173 \includegraphics[width=6cm]{all.png}
+                                          
+Using draft setting for this image.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 173.
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/base/t1cmtt.fd
+File: t1cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+Package microtype Info: Loading generic settings for font family
+(microtype)             `cmtt' (encoding: T1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+LaTeX Font Info:    Font shape `T1/pplx/bx/n' in size <9> not available
+(Font)              Font shape `T1/pplx/b/n' tried instead on input line 174.
+>>>>>>> 38a19f012f3503dd3c74e31d48ec3754255779c4
 
 Underfull \hbox (badness 10000) in paragraph at lines 185--186
 
  []
 
+<<<<<<< HEAD
 [5 <./all.png>] <longshort.png, id=43, 578.16pt x 433.62pt>
 File: longshort.png Graphic file (type png)
 
@@ -691,6 +725,41 @@ File: halves.png Graphic file (type png)
  <use halves.png>
 Package pdftex.def Info: halves.png used on input line 200.
 (pdftex.def)             Requested size: 170.71652pt x 128.03589pt.
+=======
+[5]
+
+LaTeX Warning: File `longshort.png' not found on input line 184.
+
+
+! Package pdftex.def Error: File `longshort.png' not found.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.184 \includegraphics[width=6cm]{longshort.png}
+                                                
+Using draft setting for this image.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: File `halves.png' not found on input line 193.
+
+
+! Package pdftex.def Error: File `halves.png' not found.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.193 \includegraphics[width=6cm]{halves.png}
+                                             
+Using draft setting for this image.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+>>>>>>> 38a19f012f3503dd3c74e31d48ec3754255779c4
 
 Underfull \hbox (badness 10000) in paragraph at lines 211--212
 
@@ -701,8 +770,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 213--214
 
  []
 
+<<<<<<< HEAD
 [6 <./longshort.png> <./halves.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 225--228
+=======
+[6]
+Underfull \hbox (badness 10000) in paragraph at lines 218--221
+>>>>>>> 38a19f012f3503dd3c74e31d48ec3754255779c4
 []
  []
 
@@ -740,6 +814,7 @@ LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 240.
  ) 
 Here is how much of TeX's memory you used:
+<<<<<<< HEAD
  9645 strings out of 493315
  147935 string characters out of 6137904
  365360 words of memory out of 5000000
@@ -760,4 +835,28 @@ PDF statistics:
  65 compressed objects within 1 object stream
  20 named destinations out of 1000 (max. 500000)
  53269 words of extra memory for PDF output out of 61914 (max. 10000000)
+=======
+ 9644 strings out of 493315
+ 148257 string characters out of 6137904
+ 365608 words of memory out of 5000000
+ 12671 multiletter control sequences out of 15000+600000
+ 65169 words of font info for 261 fonts, out of 8000000 for 9000
+ 957 hyphenation exceptions out of 8191
+ 36i,11n,43p,1850b,601s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2013/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}
+{/usr/local/texlive/2013/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/tex
+live/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texli
+ve/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texliv
+e/2013/texmf-dist/fonts/type1/public/fpl/fplrc8a.pfb></usr/local/texlive/2013/t
+exmf-dist/fonts/type1/public/cm-super/sftt1000.pfb></usr/local/texlive/2013/tex
+mf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/local/texlive/2013/texmf-dist
+/fonts/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/
+type1/urw/palatino/uplri8a.pfb>
+Output written on article.pdf (7 pages, 128855 bytes).
+PDF statistics:
+ 103 PDF objects out of 1000 (max. 8388607)
+ 86 compressed objects within 1 object stream
+ 19 named destinations out of 1000 (max. 500000)
+ 53809 words of extra memory for PDF output out of 61914 (max. 10000000)
+>>>>>>> 38a19f012f3503dd3c74e31d48ec3754255779c4
 
