@@ -175,9 +175,9 @@ This is a problem many are interested in solving. With the insurgence of mobile 
 	
 	We determined that distance elapsed is the best metric of run progress after considering the alternative instantaneous speed.  It is difficult to define the term instantaneous as to produce speed a rate must be taken and therefore it is imperative to decide upon a time interval which we define as instantaneous.  Using elapsed distance allows the bypassing of this arbitrary design problem, though speed could still easily be calculated by measuring the change in elapsed distance over some defined time interval.\\
 	
-	We consider the tradeoff of with how many variables we represent a run and how tractable and verifiable our analysis is.  We considered a representation of n >= 4 dimensions, adding instantaneous parameters such as pace, heart rate, etc. and found that these additional parameters gave us little benefit while greatly complicating our analysis.  We found that variables time, distance elapsed, and total distance provided the simplest reasonable and most tractable effective results.\\
+	We consider the tradeoff of with how many variables we represent a run and how tractable and verifiable our analysis is.  We considered a representation of n $\ge$ 4 dimensions, adding instantaneous parameters such as pace, heart rate, etc. and found that these additional parameters gave us little benefit while greatly complicating our analysis.  We found that variables time, distance elapsed, and total distance provided the simplest reasonable and most tractable effective results.\\
 	
-	To implement a k-nearest neighbors algorithm we had to make a best definition of nearest and determine how many neighbors to include in our analysis.  We considered other definitions of nearest but settled on comparing z-values as we assumed the invariant of good data and only comparing among the same runner such that many other variables can be ignored for the sake of our analysis.  We semi-arbitrarily came to the conclusion of using k=5 for our neighbors, determining that 5 strikes a nice balance between an accurate prediction, fast execution, and readable results.  We found that for k>=5 the quantitative benefit of additional neighbors dropped off exponentially.\\
+	To implement a k-nearest neighbors algorithm we had to make a best definition of nearest and determine how many neighbors to include in our analysis.  We considered other definitions of nearest but settled on comparing z-values as we assumed the invariant of good data and only comparing among the same runner such that many other variables can be ignored for the sake of our analysis.  We semi-arbitrarily came to the conclusion of using k=5 for our neighbors, determining that 5 strikes a nice balance between an accurate prediction, fast execution, and readable results.  We found that for k$\ge$5 the quantitative benefit of additional neighbors dropped off exponentially.\\
 	
 	We decided to use secant and tangent lines in supplying our pace recommendation output due to their simplicity and understandability. For the purposes of our algorithms, we wanted to provide a simple metric which a runner could use as an immediate recommendation.  We considered outputting our more detailed itineraries though these are beyond the goals of our project.\\
 
@@ -230,6 +230,7 @@ In the first case, we compared the accuracy of predicted pace between short runs
 \caption{A graph comparing actual pace with predicted pace with long runs shown in red and short runs in blue. }
 \end{center}
 \end{figure}
+
  
  \begin{figure}[H]
 \begin{center}
