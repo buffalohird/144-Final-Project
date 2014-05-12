@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  12 MAY 2014 18:33
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  12 MAY 2014 18:37
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -663,7 +663,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 151--152
 
  []
 
-[3] <overlap_run.png, id=47, 597.9138pt x 447.1104pt>
+[3] <overlap_run.png, id=26, 597.9138pt x 447.1104pt>
 File: overlap_run.png Graphic file (type png)
  <use overlap_run.png>
 Package pdftex.def Info: overlap_run.png used on input line 155.
@@ -680,7 +680,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 164--165
 
  []
 
-<overlap_run_secant.png, id=49, 597.9138pt x 447.1104pt>
+<overlap_run_secant.png, id=28, 597.9138pt x 447.1104pt>
 File: overlap_run_secant.png Graphic file (type png)
 
 <use overlap_run_secant.png>
@@ -721,7 +721,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 210--211
 
  []
 
-[5] <all.png, id=66, 578.16pt x 433.62pt>
+[5] <all.png, id=47, 578.16pt x 433.62pt>
 File: all.png Graphic file (type png)
  <use all.png>
 Package pdftex.def Info: all.png used on input line 216.
@@ -736,13 +736,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 223--224
 
  []
 
-<longshort.png, id=67, 578.16pt x 433.62pt>
+<longshort.png, id=48, 578.16pt x 433.62pt>
 File: longshort.png Graphic file (type png)
  <use longshort.png>
 Package pdftex.def Info: longshort.png used on input line 229.
 (pdftex.def)             Requested size: 170.71652pt x 128.03589pt.
 
-<halves.png, id=68, 578.16pt x 433.62pt>
+<halves.png, id=49, 578.16pt x 433.62pt>
 File: halves.png Graphic file (type png)
  <use halves.png>
 Package pdftex.def Info: halves.png used on input line 237.
@@ -779,15 +779,25 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 281.
  (./article.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 281.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 281.
-Package rerunfilecheck Info: File `article.out' has not changed.
-(rerunfilecheck)             Checksum: 45FE0C0B6444B7B0D4EE1BCA11EF7113;306.
+
+
+Package rerunfilecheck Warning: File `article.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `article.out':
+(rerunfilecheck)             Before: D41D8CD98F00B204E9800998ECF8427E;0
+(rerunfilecheck)             After:  45FE0C0B6444B7B0D4EE1BCA11EF7113;306.
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 281.
  ) 
 Here is how much of TeX's memory you used:
- 11056 strings out of 493315
- 167781 string characters out of 6137904
- 403049 words of memory out of 5000000
- 14050 multiletter control sequences out of 15000+600000
+ 11049 strings out of 493315
+ 167708 string characters out of 6137904
+ 402801 words of memory out of 5000000
+ 14043 multiletter control sequences out of 15000+600000
  67801 words of font info for 276 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  36i,16n,43p,1840b,642s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -798,10 +808,10 @@ ive/2013/texmf-dist/fonts/type1/public/fpl/fplrc8a.pfb></usr/local/texlive/2013
 /texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/local/texlive/2013/texmf-
 dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2013/texmf-dist/fo
 nts/type1/urw/palatino/uplri8a.pfb>
-Output written on article.pdf (8 pages, 408647 bytes).
+Output written on article.pdf (8 pages, 408303 bytes).
 PDF statistics:
- 120 PDF objects out of 1000 (max. 8388607)
- 93 compressed objects within 1 object stream
+ 101 PDF objects out of 1000 (max. 8388607)
+ 74 compressed objects within 1 object stream
  26 named destinations out of 1000 (max. 500000)
- 53322 words of extra memory for PDF output out of 61914 (max. 10000000)
+ 53274 words of extra memory for PDF output out of 61914 (max. 10000000)
 
