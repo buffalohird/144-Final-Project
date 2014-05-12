@@ -4,3 +4,9 @@
 *.pbxproj
 
 *.xcuserstate
+
+*.gz
+
+*.pdf
+
+*.log

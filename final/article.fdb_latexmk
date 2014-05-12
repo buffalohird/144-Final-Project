@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1399926336 "article.tex" "article.pdf" "article" 1399926337
+["pdflatex"] 1399928372 "article.tex" "article.pdf" "article" 1399928374
   "/usr/local/texlive/2013/texmf-dist/tex/generic/ifxetex/ifxetex.sty" 1284331290 1458 43ab4710dc82f3edeabecd0d099626b2 ""
   "/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/gettitlestring.sty" 1303254447 8237 52810bdb4db2270e717422560a104aea ""
   "/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/hobsub-generic.sty" 1338332114 189108 8b3553a56c83ff61acecb36b75d817e2 ""
@@ -45,9 +45,9 @@
   "/usr/local/texlive/2013/texmf-dist/tex/latex/titlesec/titlesec.sty" 1324083561 37083 54a2e11f0f208916a9976d9e4837d144 ""
   "/usr/local/texlive/2013/texmf-dist/tex/latex/tools/multicol.sty" 1312409015 26766 56c30c5bea3083b5a0d6fc2ce0063096 ""
   "/usr/local/texlive/2013/texmf-dist/tex/latex/url/url.sty" 1264379145 21932 e3a9cf32ee9b853b42be14c2f25b873c ""
-  "article.aux" 1399926337 1402 01964ccefa696514c0215a5bb7ac2ac3 ""
-  "article.out" 1399926337 302 b80d3e5e100053b48e7649ed8176694e ""
-  "article.tex" 1399926329 6014 cebdd0eb0e019f4d3da2cf1679a9006e ""
+  "article.aux" 1399928374 1499 9d49a07c8e2087b81affdd7386095b7d ""
+  "article.out" 1399928374 306 45fe0c0b6444b7b0d4ee1bca11ef7113 ""
+  "article.tex" 1399928370 23879 b642cfa9305b7033674326b9cea35db3 ""
   (generated)
   "article.log"
   "article.out"
