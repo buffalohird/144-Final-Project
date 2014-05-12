@@ -23,6 +23,8 @@
 \usepackage{lipsum} % Package to generate dummy text throughout this template
 
 \usepackage{graphicx} 
+\usepackage[]{algorithm2e}
+
 
 \usepackage[sc]{mathpazo} % Use the Palatino font
 \usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
@@ -128,11 +130,26 @@ This is a problem many are interested in solving. With the insurgence of mobile 
 
 	To gather data for this implementation we sampled runners with an interval of once per second. Utilizing this data we can build up our 3-dimensional graph by plotting these sampled elapsed distances over the length of the activity. We note that our z-value is simply the last x-value or the total elapsed distance at the end of our activity.  For the sake of this paper we assume that these values are correctly equivalent and runners accurately predetermine their running distance. We also utilized automated test data generation which produced pseudo-random run data constrained to reasonable performance as seen in our real test data.  We determined probabilistic changes to a runner's pace through an activity based on the ways in which real runners changed their pace over the course of a run. This data allowed us to more rigorously test the accuracy and quality of our predictions as gathering a multitude of real data was impractical for the scope of our project.\\
 	
+\begin{algorithm}[H]
+ \KwData{Given a current time x, current distance y, and desired run distance z}
+
+ \For{each complete run in data}{  
+  \If{is one of the closest k runs}{
+   include this run in $closest$
+  }
+ }
+ \For{each run in $closest$}{  
+  normalize time to [0,1] minutes\linebreak\linebreak
+  calculate the weight for this run based on difference in $z$
+ }
+ Average all runs in $closest$ based on their weighting\linebreak\linebreak
+ Rescale time from [0,1] to true time
+ 
+ \caption{Computing the average predictive run}
+\end{algorithm}
+	
 	Given a desired run distance z, our algorithm uses a variation of a k-closest neighbor algorithm, where we choose k closest runs to our desired activity and use these to predict our new activity.  We determine a run's closeness to another run by its z-distance, utilizing the assumption that we are considering only data from the same user.  Given these neighbors, we normalize each's time to the time interval of [0,1] (minutes) such that we can directly compare them. We note that though this is a naive direct comparison between runs, we later normalize the predictive weight of a neighboring run using exponential decay to adjust for this.  We describe how we average these k closest neighbors to produce a prediction.\\
 	
-	Our prediction algorithm implements a merging of our closest neighbors, iterating through each time interval for which an average of the elapsed distances is produced using geometric averaging of coordinates.  We achieve reasonable accuracy in this process by using an exponential decay weighting, by which runs further in distance from our desired prediction are given exponentially lower weighting.  By this we have our weighted output value:. We defined our gamma value such that we give a neighboring run <1\% weighting after a 5km distance from our desired output.  We believe this difference is the value at which we are considering distinctly separate types of runs.  We note that generally for every given kilometer away from our desired output, the weighting of a neighbor is essentially cut in a third.\\
-	
-
 \begin{figure}[H]
 \begin{center}
 \includegraphics[width=6cm]{overlap_run.png}
@@ -140,12 +157,16 @@ This is a problem many are interested in solving. With the insurgence of mobile 
 \end{center}
 \end{figure}
 	
+	Our prediction algorithm implements a merging of our closest neighbors, iterating through each time interval for which an average of the elapsed distances is produced using geometric averaging of coordinates.  We achieve reasonable accuracy in this process by using an exponential decay weighting, by which runs further in distance from our desired prediction are given exponentially lower weighting.  By this we have our weighted output value:. We defined our gamma value such that we give a neighboring run <1\% weighting after a 5km distance from our desired output.  We believe this difference is the value at which we are considering distinctly separate types of runs.  We note that generally for every given kilometer away from our desired output, the weighting of a neighbor is essentially cut in a third.\\
+	
+	
+	
 	Using this predicted graph R(x,y,z) we provide tangent-line and secant-line predictions such that we provide a recommended pace for a runner such that given their current performance they achieve, exceed, or relax compared to their usual performance.  This step essentially merges our predictive data with the runner'€™s current activity and would be the useful user-facing data provided in a retail application of our algorithms.\\
 	
 \begin{figure}[H]
 \begin{center}
-\includegraphics[width=6cm]{overlap_run.png}
-\caption{A graph of pace from an actual run (shown in red) and a graph of the predicted pace (shown in blue).  }
+\includegraphics[width=6cm]{overlap_run_secant.png}
+\caption{A graph of pace from an actual run (shown in red) and a graph of the predicted pace (shown in blue).  The secant line pace prediction is shown for the actual and predicted run in red and blue dashed lines, respectively.}
 \end{center}
 \end{figure}	
 
@@ -169,15 +190,22 @@ This is a problem many are interested in solving. With the insurgence of mobile 
 \indent Given that the goal of the algorithm is predicting future pace information given current time and distance, we chose to assess the results quantitatively. The analysis involved taking a sample run (not in our database), calculating expected pace at a random point, and comparing the accuracy of our expected pace to the actual pace.\\
 
 Here we present the full approach for measuring accuracy:
-\begin{itemize}
-\item Select a random run not used in the training data set
-\item Select a random time point in that run, and determine the (time, distance) tuple for that point in time
-\item Calculate the secant line between this time point and the end of the run, the slope of which represents average pace for the rest of the run
-\item Now use the SmarteRun algorithm to model a predicted run using this same time, distance, and total distance
-\item Calculate the secant line between this time point and the end of the run in this predicted model, the slope of which represents predicted average pace for the rest of the run
-        	
-\item Repeat this process over multiple iterations, recording both the predicted pace and actual pace for each sample. Then calculate some measure of error (such as RMSE)
-\end{itemize}
+
+\begin{algorithm}[H]
+ \KwData{Given a set of complete runs $S$}
+
+ \For{i = 0; i < 5000; i++}{  
+Choose a random run $r$ in $S$\\
+Choose a random (time,distance) point in $r$ as $(t,d)$\linebreak\linebreak
+Calculate the true secant line $l_t$ from $(t,d)$ to the end of the run\\
+Slope($l_t$) = true average pace for the rest of the run\linebreak\linebreak
+Use the SmarteRun algorithm to model a predicted run using $t$, $d$, and total distance\linebreak\linebreak
+Calculate the secant line $l_p$ from $(t,d)$ to the end of the predicted run\\
+Slope($l_p$) = predicted average pace for the rest of the run
+ }
+ Calculate error between each $l_t$ and $l_p$
+ \caption{Assessing the accuracy of a run prediction}
+\end{algorithm}
 
 The purpose of this approach was to compare the accuracy of predicted pace to the actual pace for a run. Since our algorithm yields a full model of distance over time for a run, it is possible to sample multiple points along this model and compare expected pace to actual pace. We chose to use RMSE to measure accuracy because this project represents baseline accuracy; as we make changes to the algorithm in the future, we can optimize parameters with respect to minimizing RMSE.\\
 
