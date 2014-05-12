@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  12 MAY 2014 18:14
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  12 MAY 2014 18:25
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -731,10 +731,15 @@ Underfull \hbox (badness 10000) in paragraph at lines 221--222
 
  []
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 223--224
+
+ []
+
 <longshort.png, id=66, 578.16pt x 433.62pt>
 File: longshort.png Graphic file (type png)
  <use longshort.png>
-Package pdftex.def Info: longshort.png used on input line 227.
+Package pdftex.def Info: longshort.png used on input line 229.
 (pdftex.def)             Requested size: 170.71652pt x 128.03589pt.
 
 <halves.png, id=67, 578.16pt x 433.62pt>
@@ -742,40 +747,41 @@ File: halves.png Graphic file (type png)
  <use halves.png>
 Package pdftex.def Info: halves.png used on input line 236.
 (pdftex.def)             Requested size: 170.71652pt x 128.03589pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 247--248
-
- []
-
-[6 <./all.png> <./longshort.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 249--250
+ [6 <./all.png> <./longshort.png> <./halves.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 251--252
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 261--264
-[]
+Underfull \hbox (badness 10000) in paragraph at lines 253--254
+
  []
 
-[7 <./halves.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 266--269
+
+Underfull \hbox (badness 10000) in paragraph at lines 265--268
 []
  []
 
 
-Underfull \hbox (badness 6332) in paragraph at lines 266--269
+Underfull \hbox (badness 10000) in paragraph at lines 270--273
+[]
+ []
+
+
+Underfull \hbox (badness 6332) in paragraph at lines 270--273
 \T1/pplx/m/n/10 (+20) Karageorghis, Costas I., Jas-min C.
  []
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 276.
-[8]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 276.
+[7]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 280.
+ [8]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 280.
  (./article.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 276.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 276.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 280.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 280.
 Package rerunfilecheck Info: File `article.out' has not changed.
 (rerunfilecheck)             Checksum: 45FE0C0B6444B7B0D4EE1BCA11EF7113;306.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 276.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 280.
  ) 
 Here is how much of TeX's memory you used:
  11057 strings out of 493315
@@ -784,14 +790,14 @@ Here is how much of TeX's memory you used:
  14050 multiletter control sequences out of 15000+600000
  67646 words of font info for 276 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 36i,16n,43p,1840b,644s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 36i,16n,43p,1840b,642s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2013/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
 exlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/tex
 live/2013/texmf-dist/fonts/type1/public/fpl/fplrc8a.pfb></usr/local/texlive/201
 3/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/local/texlive/2013/texmf
 -dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2013/texmf-dist/f
 onts/type1/urw/palatino/uplri8a.pfb>
-Output written on article.pdf (8 pages, 401614 bytes).
+Output written on article.pdf (8 pages, 401170 bytes).
 PDF statistics:
  116 PDF objects out of 1000 (max. 8388607)
  90 compressed objects within 1 object stream

@@ -218,7 +218,9 @@ Overall the results indicated a RMSE of 2.3088. As can be seen in the figure bel
 \end{center}
 \end{figure}
 
-However, we have two implicit truths about these predictions. The first is that predicting pace for shorter runs should be easier (more accurate) than doing so for longer runs. This is because pace can vary less over a shorter run, so we would assume less possible variance in our model. The second is that predicting pace in the second half of a run should be more accurate than doing so for the first half of the run. This is because the second half of the run is by default closer to the end, so runners? parameters have less time to change. We decided to test these two assumptions, with the specific goal of making sure that we still have reasonable accuracy over the harder of these two problems. This is also a useful benchmark, as future optimizations should not just attempt to reduce RMSE, but also attempt to increase accuracy for these harder subsets of the problem.\\
+However, we have two implicit truths about these predictions. The first is that predicting pace for shorter runs should be easier (more accurate) than doing so for longer runs. This is because pace can vary less over a shorter run, so we would assume less possible variance in our model. The second is that predicting pace in the second half of a run should be more accurate than doing so for the first half of the run. This is because the second half of the run is by default closer to the end, so runners' parameters have less time to change. \\
+
+We decided to test these two assumptions, with the specific goal of making sure that we still have reasonable accuracy over the harder of these two problems. This is also a useful benchmark, as future optimizations should not just attempt to reduce RMSE, but also attempt to increase accuracy for these harder subsets of the problem.\\
  
 In the first case, we compared the accuracy of predicted pace between short runs and long runs. To do so, we repeated the algorithm presented above over a group of runs less than 3km in length as well as over a group of runs greater than 5km in length. We found a RMSE of 0.8771  for the group of short runs as compared to an RMSE of 4.0195 for the group of longer runs.
 
@@ -229,14 +231,16 @@ In the first case, we compared the accuracy of predicted pace between short runs
 \end{center}
 \end{figure}
  
-In the second case, we compared the accuracy of predicted pace between the predictions made in the first half and those made in the second half of runs. We used the same procedure as above, but drew random starting points from the first and second half of time values, respectively. We found a RMSE of 0.5969 for the first halves of runs as compared to an RMSE of 2.9751 for the second halves runs.
-
-\begin{figure}[H]
+ \begin{figure}[H]
 \begin{center}
 \includegraphics[width=6cm]{halves.png}
-\caption{A graph comparing actual pace with predicted pace with predictions made in the first half of a run shown in blue and those in the second half of a run in red. }
+\caption{A graph comparing actual pace with predicted pace. Predictions made in the first half of a run are shown in blue and those in the second half of a run in red. }
 \end{center}
 \end{figure}
+ 
+In the second case, we compared the accuracy of predicted pace between the predictions made in the first half and those made in the second half of runs. We used the same procedure as above, but drew random starting points from the first and second half of time values, respectively. We found a RMSE of 0.5969 for the first halves of runs as compared to an RMSE of 2.9751 for the second halves runs.
+
+
 
 
 
