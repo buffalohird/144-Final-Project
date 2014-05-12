@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1399931290 "article.tex" "article.pdf" "article" 1399931291
+["pdflatex"] 1399931457 "article.tex" "article.pdf" "article" 1399931458
   "/usr/local/texlive/2013/texmf-dist/tex/context/base/supp-pdf.mkii" 1337017135 71627 94eb9990bed73c364d7f53f960cc8c5b ""
   "/usr/local/texlive/2013/texmf-dist/tex/generic/ifxetex/ifxetex.sty" 1284331290 1458 43ab4710dc82f3edeabecd0d099626b2 ""
   "/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/gettitlestring.sty" 1303254447 8237 52810bdb4db2270e717422560a104aea ""
@@ -58,9 +58,9 @@
   "/usr/local/texlive/2013/texmf-dist/tex/latex/tools/multicol.sty" 1312409015 26766 56c30c5bea3083b5a0d6fc2ce0063096 ""
   "/usr/local/texlive/2013/texmf-dist/tex/latex/url/url.sty" 1264379145 21932 e3a9cf32ee9b853b42be14c2f25b873c ""
   "all.png" 0 -1 0 ""
-  "article.aux" 1399931291 1940 07e27b04101829cd4a247520ba21af00 ""
-  "article.out" 1399931291 306 45fe0c0b6444b7b0d4ee1bca11ef7113 ""
-  "article.tex" 1399931289 27613 863a9e7a9a36ba04f6168bb9a605effe ""
+  "article.aux" 1399931458 1940 07e27b04101829cd4a247520ba21af00 ""
+  "article.out" 1399931458 306 45fe0c0b6444b7b0d4ee1bca11ef7113 ""
+  "article.tex" 1399931455 27619 2bc49244849bae8553fad22efb3771e7 ""
   "halves.png" 0 -1 0 ""
   "longshort.png" 0 -1 0 ""
   (generated)
