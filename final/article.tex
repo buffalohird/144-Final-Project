@@ -199,7 +199,7 @@ Choose a random run $r$ in $S$\\
 Choose a random (time,distance) point in $r$ as $(t,d)$\linebreak\linebreak
 Calculate the true secant line $l_t$ from $(t,d)$ to the end of the run\\
 Slope($l_t$) = true average pace for the rest of the run\linebreak\linebreak
-Use the SmarteRun algorithm to model a predicted run using $t$, $d$, and total distance\linebreak\linebreak
+Use the SmarteRun algorithm trained on $S - r$ to model a predicted run using $t$, $d$, and total distance\linebreak\linebreak
 Calculate the secant line $l_p$ from $(t,d)$ to the end of the predicted run\\
 Slope($l_p$) = predicted average pace for the rest of the run
  }
@@ -209,7 +209,7 @@ Slope($l_p$) = predicted average pace for the rest of the run
 
 The purpose of this approach was to compare the accuracy of predicted pace to the actual pace for a run. Since our algorithm yields a full model of distance over time for a run, it is possible to sample multiple points along this model and compare expected pace to actual pace. We chose to use RMSE to measure accuracy because this project represents baseline accuracy; as we make changes to the algorithm in the future, we can optimize parameters with respect to minimizing RMSE.\\
 
-Overall the results indicated a RMSE of 2.3088. As can be seen in the figure below, in general average pace was close to predicted pace (as shown by the large cluster of data points along the line $x=y$). However, clear groups of outliers exist, particularly in predicting too fast of a pace. A simple solution to reduce error would be capping the pace that we predict at $10 m/s$ (this pace represents one of the fastest human sprints, and is highly unlikely to be exceeded by recreational runners).
+We calculated the actual and predicted paces for 5000 random points in our data set. Overall the results indicated a RMSE of 2.3088. As can be seen in the figure below, in general average pace was close to predicted pace (as shown by the large cluster of data points along the line $x=y$). However, clear groups of outliers exist, particularly in predicting too fast of a pace. A simple solution to reduce error would be capping the pace that we predict at $10 m/s$ (this pace represents one of the fastest human sprints, and is highly unlikely to be exceeded by recreational runners).
 
 \begin{figure}[H]
 \begin{center}
@@ -227,7 +227,7 @@ In the first case, we compared the accuracy of predicted pace between short runs
 \begin{figure}[H]
 \begin{center}
 \includegraphics[width=6cm]{longshort.png}
-\caption{A graph comparing actual pace with predicted pace with long runs shown in red and short runs in blue. }
+\caption{A graph comparing actual pace with predicted pace. Predictions on long runs are shown in red and short runs in blue. }
 \end{center}
 \end{figure}
 
