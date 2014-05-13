@@ -31,4 +31,4 @@ testerPace.py
   We have multiple components encapsulated in separate files / classes.  Most succintly, our code is orgnaized around the control flow:
     storage.py -> average.py -> predict.py -> plotter.py/storage.py
 
-We provide a sample file, running.py, to show how these files can all be interfaced with iteratively from a given file.
+We provide a sample file, smarter_run.py, to show how these files can all be interfaced with iteratively from a given file. Enter into the "code" directory and execute "python smarter_run.py" to begin.

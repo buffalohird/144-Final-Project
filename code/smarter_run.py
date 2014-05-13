@@ -11,6 +11,7 @@ def smarter_predict(x=300,y=1000,z=5000.0,n=5, runs=None):
 	if runs:
 		data.setRuns(runs)	
 
+	#reads in the closest runs
 	closest = data.findNClosestRuns(z, n)
 
 	#now reads in the actual data for these runs
@@ -36,11 +37,11 @@ def smarter_predict(x=300,y=1000,z=5000.0,n=5, runs=None):
 	rescaled = [(time*multiple,distance) for (time,distance) in combined]
 
 	plotter = Plotter()
-	#plotter.createGraph([rescaled,[(x,y)]],['r', 'bo'])
+	plotter.createGraph([rescaled,[(x,y)]],['r', 'bo'])
 
 	return {"prediction": sec_pred}
 
-
+#this is used to get the actual secant line as well as the predicted secant line for comparison purposes
 def test(n=1):	
 	for i in range(n):
 		data = storage.Storage()
@@ -64,7 +65,6 @@ def test(n=1):
 		#print current, random_time, random_distance, prediction, actual
 		print current, random_distance, last_distance, actual["prediction"], prediction["prediction"]
 
-test(5000)
-
-#print smarter_predict(600,1000,5000,5)
+#uncoment this to test
+print smarter_predict(600,1000,5000,5)
 

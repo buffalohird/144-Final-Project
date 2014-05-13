@@ -11,7 +11,7 @@ def closest(average,distance):
 #Returns your predicted pace to stay on track
 def secant_prediction(average,distance,time,goal):	
 
-	cur_time = closest(average,distance) * (distance / goal)
+	cur_time = closest(average,distance)
 	goal_time = closest(average,goal)	
 
 	#if we need to discunt backwards
