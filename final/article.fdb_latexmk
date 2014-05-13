@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1399933323 "article.tex" "article.pdf" "article" 1399933325
+["pdflatex"] 1399942208 "article.tex" "article.pdf" "article" 1399942238
   "/usr/local/texlive/2013/texmf-dist/tex/context/base/supp-pdf.mkii" 1337017135 71627 94eb9990bed73c364d7f53f960cc8c5b ""
   "/usr/local/texlive/2013/texmf-dist/tex/generic/ifxetex/ifxetex.sty" 1284331290 1458 43ab4710dc82f3edeabecd0d099626b2 ""
   "/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/gettitlestring.sty" 1303254447 8237 52810bdb4db2270e717422560a104aea ""
@@ -61,9 +61,10 @@
   "/usr/local/texlive/2013/texmf-dist/tex/latex/tools/xspace.sty" 1312409015 4405 b7f0681f78908bf1aa3cd73228e9fd38 ""
   "/usr/local/texlive/2013/texmf-dist/tex/latex/url/url.sty" 1264379145 21932 e3a9cf32ee9b853b42be14c2f25b873c ""
   "all.png" 1399933206 63957 abba8ca3c98e0d8f1a176a68effe5069 ""
-  "article.aux" 1399933325 2729 f3dc4e7d06e65485cc5fdc5202541263 ""
-  "article.out" 1399933325 306 45fe0c0b6444b7b0d4ee1bca11ef7113 ""
-  "article.tex" 1399933323 28666 1d72269174ebcc46ba33972ee7efe529 ""
+  "article.aux" 1399942210 2951 528e2058448b456ab79ab04c1762395a ""
+  "article.out" 1399942210 306 45fe0c0b6444b7b0d4ee1bca11ef7113 ""
+  "article.tex" 1399942237 28988 90709505efa16eb57e8b0aa07f3b6612 ""
+  "combining.png" 1399939437 133082 0e67812851b539499bc38b9ea1b23d39 ""
   "halves.png" 1399933207 46103 bd856e132ee3223a024512d4094d8acf ""
   "longshort.png" 1399933207 43416 786b7c0638e6f496f04bdf44a20b1459 ""
   "overlap_run.png" 1399933207 117627 71a848fead3bf224d2b076d77b4bc33f ""
