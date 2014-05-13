@@ -148,7 +148,7 @@ This is a problem many are interested in solving. With the insurgence of mobile 
  \caption{Computing the average predictive run}
 \end{algorithm}
 	
-	Given a desired run distance z, our algorithm uses a variation of a k-closest neighbor algorithm, where we choose k closest runs to our desired activity and use these to predict our new activity.  We determine a run's closeness to another run by its z-distance, utilizing the assumption that we are considering only data from the same user.  Given these neighbors, we normalize each's time to the time interval of [0,1] (minutes) such that we can directly compare them. We note that though this is a naive direct comparison between runs, we later normalize the predictive weight of a neighboring run using exponential decay to adjust for this.  We describe how we average these k closest neighbors to produce a prediction.\\
+	Given a desired run distance z, our algorithm uses a variation of a k-nearest-neighbor algorithm, where we choose the k-nearest runs to our desired activity and use these to predict our new activity.  We determine a run's closeness to another run by its z-distance, utilizing the assumption that we are considering only data from the same user.  Given these neighbors, we normalize each's time to the time interval of [0,1] (minutes) such that we can directly compare them. We note that though this is a naive direct comparison between runs, we later normalize the predictive weight of a neighboring run using exponential decay to adjust for this.  We describe how we average these k nearest neighbors to produce a prediction.\\
 	
 \begin{figure}[H]
 \begin{center}
