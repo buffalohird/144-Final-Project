@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  12 MAY 2014 18:37
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  12 MAY 2014 20:01
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -663,7 +663,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 151--152
 
  []
 
-[3] <overlap_run.png, id=26, 597.9138pt x 447.1104pt>
+[3] <overlap_run.png, id=47, 597.9138pt x 447.1104pt>
 File: overlap_run.png Graphic file (type png)
  <use overlap_run.png>
 Package pdftex.def Info: overlap_run.png used on input line 155.
@@ -675,132 +675,126 @@ Underfull \hbox (badness 10000) in paragraph at lines 160--161
 
  []
 
+<combining.png, id=49, 519.3804pt x 385.9218pt>
+File: combining.png Graphic file (type png)
+ <use combining.png>
+Package pdftex.def Info: combining.png used on input line 164.
+(pdftex.def)             Requested size: 170.71652pt x 126.84816pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 164--165
+Underfull \hbox (badness 10000) in paragraph at lines 169--170
 
  []
 
-<overlap_run_secant.png, id=28, 597.9138pt x 447.1104pt>
+<overlap_run_secant.png, id=50, 597.9138pt x 447.1104pt>
 File: overlap_run_secant.png Graphic file (type png)
 
 <use overlap_run_secant.png>
-Package pdftex.def Info: overlap_run_secant.png used on input line 168.
+Package pdftex.def Info: overlap_run_secant.png used on input line 173.
 (pdftex.def)             Requested size: 170.71652pt x 127.65974pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 174--175
+Underfull \hbox (badness 10000) in paragraph at lines 179--180
+
+ []
+
+[4 <./overlap_run.png> <./combining.png> <./overlap_run_secant.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 181--182
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 176--177
-
- []
-
-[4 <./overlap_run.png> <./overlap_run_secant.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 178--179
+Underfull \hbox (badness 10000) in paragraph at lines 183--184
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 180--181
+Underfull \hbox (badness 10000) in paragraph at lines 185--186
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 182--183
+Underfull \hbox (badness 10000) in paragraph at lines 187--188
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 190--191
+Underfull \hbox (badness 10000) in paragraph at lines 195--196
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 210--211
+Underfull \hbox (badness 10000) in paragraph at lines 213--214
 
  []
 
-[5] <all.png, id=47, 578.16pt x 433.62pt>
+[5] <all.png, id=69, 578.16pt x 433.62pt>
 File: all.png Graphic file (type png)
  <use all.png>
-Package pdftex.def Info: all.png used on input line 216.
+Package pdftex.def Info: all.png used on input line 219.
 (pdftex.def)             Requested size: 170.71652pt x 128.03589pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 221--222
+Underfull \hbox (badness 10000) in paragraph at lines 224--225
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 223--224
+Underfull \hbox (badness 10000) in paragraph at lines 226--227
 
  []
 
-<longshort.png, id=48, 578.16pt x 433.62pt>
+<longshort.png, id=70, 578.16pt x 433.62pt>
 File: longshort.png Graphic file (type png)
  <use longshort.png>
-Package pdftex.def Info: longshort.png used on input line 229.
+Package pdftex.def Info: longshort.png used on input line 232.
 (pdftex.def)             Requested size: 170.71652pt x 128.03589pt.
 
-<halves.png, id=49, 578.16pt x 433.62pt>
+<halves.png, id=71, 578.16pt x 433.62pt>
 File: halves.png Graphic file (type png)
  <use halves.png>
-Package pdftex.def Info: halves.png used on input line 237.
+Package pdftex.def Info: halves.png used on input line 242.
 (pdftex.def)             Requested size: 170.71652pt x 128.03589pt.
- [6 <./all.png> <./longshort.png> <./halves.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 252--253
-
- []
-
-
+ [6 <./all.png> <./longshort.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 254--255
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 266--269
+Underfull \hbox (badness 10000) in paragraph at lines 256--257
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 268--271
+[]
+ []
+
+[7 <./halves.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 273--276
 []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 271--274
-[]
- []
-
-
-Underfull \hbox (badness 6332) in paragraph at lines 271--274
+Underfull \hbox (badness 6332) in paragraph at lines 273--276
 \T1/pplx/m/n/10 (+20) Karageorghis, Costas I., Jas-min C.
  []
 
-[7]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 281.
- [8]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 281.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 283.
+[8]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 283.
  (./article.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 281.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 281.
-
-
-Package rerunfilecheck Warning: File `article.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `article.out':
-(rerunfilecheck)             Before: D41D8CD98F00B204E9800998ECF8427E;0
-(rerunfilecheck)             After:  45FE0C0B6444B7B0D4EE1BCA11EF7113;306.
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 281.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 283.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 283.
+Package rerunfilecheck Info: File `article.out' has not changed.
+(rerunfilecheck)             Checksum: 45FE0C0B6444B7B0D4EE1BCA11EF7113;306.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 283.
  ) 
 Here is how much of TeX's memory you used:
- 11049 strings out of 493315
- 167708 string characters out of 6137904
- 402801 words of memory out of 5000000
- 14043 multiletter control sequences out of 15000+600000
+ 11062 strings out of 493315
+ 167881 string characters out of 6137904
+ 403049 words of memory out of 5000000
+ 14054 multiletter control sequences out of 15000+600000
  67801 words of font info for 276 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 36i,16n,43p,1840b,642s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 36i,16n,43p,1840b,644s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2013/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
 exlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/tex
 live/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texl
@@ -808,10 +802,10 @@ ive/2013/texmf-dist/fonts/type1/public/fpl/fplrc8a.pfb></usr/local/texlive/2013
 /texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/local/texlive/2013/texmf-
 dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2013/texmf-dist/fo
 nts/type1/urw/palatino/uplri8a.pfb>
-Output written on article.pdf (8 pages, 408303 bytes).
+Output written on article.pdf (8 pages, 506065 bytes).
 PDF statistics:
- 101 PDF objects out of 1000 (max. 8388607)
- 74 compressed objects within 1 object stream
- 26 named destinations out of 1000 (max. 500000)
- 53274 words of extra memory for PDF output out of 61914 (max. 10000000)
+ 123 PDF objects out of 1000 (max. 8388607)
+ 94 compressed objects within 1 object stream
+ 27 named destinations out of 1000 (max. 500000)
+ 53327 words of extra memory for PDF output out of 61914 (max. 10000000)
 
